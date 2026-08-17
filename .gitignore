@@ -1,0 +1,62 @@
+# ---------------------------------------------------------------------------
+# Virtual environment
+# ---------------------------------------------------------------------------
+.venv/
+
+# ---------------------------------------------------------------------------
+# Secrets - never commit
+# ---------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# ---------------------------------------------------------------------------
+# Python bytecode and build artefacts
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+
+# ---------------------------------------------------------------------------
+# Tool caches
+# ---------------------------------------------------------------------------
+.pytest_cache/
+.ruff_cache/
+
+# ---------------------------------------------------------------------------
+# Editor and OS
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---------------------------------------------------------------------------
+# Raw, unpublishable data - volunteer submissions, audio, pre-anonymisation
+# ---------------------------------------------------------------------------
+data/raw/
+
+# ---------------------------------------------------------------------------
+# Local logs and scratch
+# ---------------------------------------------------------------------------
+logs/
+scratch/
+tmp/
+*.log
+
+# ---------------------------------------------------------------------------
+# DELIBERATELY NOT IGNORED - these must stay in Git:
+#   pyproject.toml, uv.lock, README.md, .python-version
+#   src/, tests/
+#   configs/, prompts/            (later milestones)
+#   data/generated/, data/utterances/, data/noise_profile/
+#   results/                      (per-item records and run manifests)
+#
+# Never add a blanket "data/", "results/" or "*.json" rule - it would silently
+# exclude the publishable benchmark artefacts this project exists to produce.
+# ---------------------------------------------------------------------------
